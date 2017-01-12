@@ -1,5 +1,7 @@
 package com.luo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.luo.dao.UserDao;
@@ -14,5 +16,11 @@ public class UserServiceImpl implements UserService {
     public User selectUserById(Integer userId) {  
         return userDao.selectUserById(userId);  
           
-    }  
+    }
+
+	@Override
+	public List<User> selectAllUser() {
+		// TODO Auto-generated method stub
+		return userDao.selectAllUser();
+	}  
 }
